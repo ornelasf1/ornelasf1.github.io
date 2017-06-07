@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <body>
+<div id="getting-started"></div>
+<script type="text/javascript">
+  $("#getting-started")
+  .countdown("2017/01/01", function(event) {
+    $(this).text(
+      event.strftime('%D days %H:%M:%S')
+    );
+  });
+</script>
 <h1> Hello world</h1>
 <p>Here I am</p>
 </body>
