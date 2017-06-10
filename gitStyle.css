@@ -1,0 +1,26 @@
+body{
+	background-color: #a5a5a5;
+}
+
+header{
+	margin: 0;
+	padding: 0;
+}
+
+#intro{
+	background-color: #444444;
+	display: table;
+	height: 99%;
+	width: 99%;
+	position: absolute;
+	margin: auto;
+}
+
+#introText{
+	font-size: 70px;
+	color: white;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
