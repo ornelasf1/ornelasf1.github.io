@@ -16,10 +16,19 @@ header{
 	margin: auto;
 }
 
-#introText{
+.introText{
 	font-size: 70px;
 	color: white;
 	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.introText.table-hidden{
+	font-size: 70px;
+	color: white;
+	display: none;
 	vertical-align: middle;
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
