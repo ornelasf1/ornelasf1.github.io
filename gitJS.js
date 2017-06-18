@@ -2,8 +2,7 @@ var iter = 0;
 var baseid;
 
 $(document).ready(function(){
-	baseid = setInterval(welcomeAnim(), 1000);
-	setInterval(alert("interval"), 4000);
+	baseid = setInterval(function(){ welcomeAnim() }, 1500);
 	disappearBar();
 });
 
@@ -19,23 +18,26 @@ function welcomeText(){
 function disappearBar(){
 	setTimeout(function(){
 		$("#intro-bar").fadeOut("slow");
-	}, 6000);
+	}, 8000);
 }
 
 function welcomeAnim(){
-	if(iter++ > 3){
+	if(iter++ > 4){
 		clearInterval(baseid);
 		return;
 	}
 	var selector = "welcome" + iter;
 	var text = document.getElementById(selector);
-	var pos = -100;
+	var pos = -1000;
 	var id = setInterval(frame, 5);
 	function frame(){
 		if(pos == 2000){
 			clearInterval(id);
 		}else if(pos > 300 && pos < 600){
 			pos+=1;
+			text.style.left = pos + "px";
+		}else if(pos < -300){
+			pos+=300;
 			text.style.left = pos + "px";
 		}else{
 			pos+=10;
